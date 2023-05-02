@@ -1,0 +1,47 @@
+.rgb-effect {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+
+    animation: rainbow 50s ease-in-out infinite;
+    border: 2px solid;
+    border-radius: .2rem;
+    font-size: 3rem;
+    
+}
+
+.rgb-effect::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    z-index: -1;
+    border-radius: inherit;
+    filter: blur(2px);
+    animation: shadow-rainbow 50s ease-in-out infinite;
+}
+
+@keyframes rainbow {
+    0% { color: rgb(255, 0, 0); border-color: rgb(255, 0, 0); }
+    15% { color: rgb(255, 255, 0); border-color: rgb(255, 255, 0); }
+    30% { color: rgb(0, 255, 0); border-color: rgb(0, 255, 0); }
+    45% { color: rgb(0, 255, 255); border-color: rgb(0, 255, 255); }
+    60% { color: rgb(0, 0, 255); border-color: rgb(0, 0, 255); }
+    75% { color: rgb(255, 0, 255); border-color: rgb(255, 0, 255); }
+    90% { color: rgb(255, 255, 255); border-color: rgb(255, 255, 255); }
+    100% { color: rgb(255, 0, 0); border-color: rgb(255, 0, 0); }
+}
+
+@keyframes shadow-rainbow {
+    0% { box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5); }
+    15% { box-shadow: 0px 0px 10px rgba(255, 255, 0, 0.5); }
+    30% { box-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5); }
+    45% { box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5); }
+    60% { box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.5); }
+    75% { box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.5); }
+    90% { box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); }
+    100% { box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5); }
+}
