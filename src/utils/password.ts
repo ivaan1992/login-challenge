@@ -1,12 +1,10 @@
 import bycript from 'bcryptjs';
 
 export async function comparePassword(password: string, encrypted: string): Promise<boolean> {
-    const encryptedPswd = await encrypt(password);
-
-    return encryptedPswd === encrypted;
+    return await bycript.compare(password, encrypted);
 }
 
-export async function encrypt(password: string): Promise<string | unknown> {
-    const salt: string = process.env.SALT as string;
-    return await bycript.hash(password, salt) as Promise<string> | unknown;
+export async function encrypt(password: string): Promise<string> {
+    const salt = await bycript.genSalt(10);
+    return await bycript.hash(password, salt) as string;
 }

@@ -1,11 +1,20 @@
-import { addUser } from "@/utils/users";
+import { encrypt } from "@/utils/password";
+import { addUser, getUser, userExists } from "@/utils/users";
+import { User } from '../../../../utils/users';
 
 export async function POST(request: Request) {
     const {email, name, password} = await request.json();
+    const encryptedPWSD = await encrypt(password);
+    const user: User = {email, name, password: encryptedPWSD as string};
 
-    await addUser({email, name, password});
+    if(userExists(email))
+        return new Response(JSON.stringify({
+            message: `El usuario ya existe`,
+        }));
+
+    await addUser(user);
     
     return new Response(JSON.stringify({
-        message: `Registrado el usuario ${name}`
+        message: `Registrado el usuario ${name}`,
     }));
 }
