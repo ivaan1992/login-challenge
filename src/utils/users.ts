@@ -40,6 +40,11 @@ export async function getUser({
     return user;
 }
 
+export function getUserFromEmail(email: string): User | undefined {
+    const user: User | undefined = Users.find((user: User) => user.email == email);
+    return user;
+}
+
 export function generateToken(user: User): string {
     // Remove passsword just to make sure...
     user.password = "";

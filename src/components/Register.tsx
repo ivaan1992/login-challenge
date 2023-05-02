@@ -1,8 +1,13 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { FormEvent } from "react";
+import { setCookie } from "cookies-next";
+import toastr from "toastr";
 
 export function RegisterForm() {
+
+    const router = useRouter();
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -13,10 +18,20 @@ export function RegisterForm() {
             method: "POST",
             body: JSON.stringify(data)
         })
-            .then( response => response.json())
-            .then(({message}) => {
+            .then( async response => {
+                if(response.status != 200)
+                    throw await response.json();
 
-            });
+                return response.json();
+            })
+            .then(({message, token}) => {
+                toastr.success(message);
+                setCookie('auth-x', token);
+                router.push('/user');
+            })
+            .catch(({message}) => {
+                toastr.error(message);
+            })
     }
 
     return (
