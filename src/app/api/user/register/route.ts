@@ -10,7 +10,9 @@ export async function POST(request: Request) {
     if(userExists(email))
         return new Response(JSON.stringify({
             message: `El usuario ya existe`,
-        }));
+        }), {
+            status: 500
+        });
 
     await addUser(user);
     
