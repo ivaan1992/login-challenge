@@ -17,6 +17,7 @@
     "@types/toastr": "^2.1.40",
     "autoprefixer": "10.4.14",
     "bcryptjs": "^2.4.3",
+    "cookies-next": "^2.1.1",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.4",
     "jsonwebtoken": "^9.0.0",
