@@ -3,6 +3,7 @@
 import { FormEvent } from "react";
 import { setCookies } from 'cookies-next';
 import { useRouter } from "next/navigation";
+import toastr from "toastr";
 
 export function LoginForm() {
     const router = useRouter();
@@ -16,11 +17,21 @@ export function LoginForm() {
             method: "POST",
             body: JSON.stringify(data)
         })
-            .then( response => response.json())
-            .then(({email, name, token}) => {
-                setCookies('auth-x', token);
+            .then( async response => {
+                if(response.status != 200) {
+                    throw await response.json()
+                }
+
+                return response.json();
+            })
+            .then(({user}) => {
+                setCookies('auth-x', user.token);
                 router.push('/user')
-            });
+                toastr.success(`Welcome back ${user.name} !`);
+            })
+            .catch(({error}) => {
+                toastr.error(error);
+            })
     }
     return (
         <form className="form login-form" onSubmit={handleSubmit}>

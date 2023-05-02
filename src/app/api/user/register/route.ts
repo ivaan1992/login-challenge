@@ -1,5 +1,5 @@
 import { encrypt } from "@/utils/password";
-import { addUser, getUser, userExists } from "@/utils/users";
+import { addUser, generateToken, getUser, userExists } from "@/utils/users";
 import { User } from '../../../../utils/users';
 
 export async function POST(request: Request) {
@@ -18,5 +18,6 @@ export async function POST(request: Request) {
     
     return new Response(JSON.stringify({
         message: `Registrado el usuario ${name}`,
+        token: generateToken(user),
     }));
 }
