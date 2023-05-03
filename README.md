@@ -1,6 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+First, set up the ENV vars
+- on the root project create a new `.env` file
+- fill the following variables: `SALT` `NASA`
+  - the `SALT` can be any string
+  - the `NASA` is the api key for the NASA API
 
 First, run the development server:
 
