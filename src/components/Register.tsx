@@ -24,9 +24,14 @@ export function RegisterForm() {
 
                 return response.json();
             })
-            .catch(({message}) => {
-                toastr.error(message);
-            })
+
+            .catch(error => {
+                console.error(error);
+                toastr.error(error.message);
+            });
+            // .catch(({message}) => {
+            //     toastr.error(message);
+            // })
     }
 
     return (
