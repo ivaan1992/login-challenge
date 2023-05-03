@@ -14,7 +14,7 @@ export function RegisterForm() {
 
         const data = Object.fromEntries(new FormData(e.target as HTMLFormElement))
         
-        fetch('/api/user/register', {
+        fetch('/api/user/register/route.ts', {
             method: "POST",
             body: JSON.stringify(data)
         })
