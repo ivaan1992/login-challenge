@@ -1,4 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Login App 
+
+This is an app that I created as a technical test.
+
+The purpose of this project is to show my web development basics in React. It's also a responsive project
+
+## Screenshot 🎞️
+📱
+
+![image](https://user-images.githubusercontent.com/73128809/235821388-82151cd7-87a9-4e0b-b225-0d06bcab0686.png)
+
+💻
+
+![image](https://user-images.githubusercontent.com/73128809/235824271-dcfc71a9-464b-41b6-bccf-b84e060ab156.png)
+
+##  🛠️ Built With ⚒️
+
+- Css
+- Html
+- TypeScript
+- React
+- Next
+
 
 ## [🌎 Live project](https://login-challenge-xi.vercel.app)
 
@@ -21,23 +43,28 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
+## Authors
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+👤 **Ivan Gaona**
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- GitHub: [@ivaan1992](https://github.com/ivaan1992)
+- Twitter: [@ivangaona92](https://twitter.com/ivangaona92)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ivan-linares-gaona/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Show your support
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Give a ⭐️ if you like this project!
 
-## Deploy on Vercel
+## Acknowledgments
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+## 📝 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is <a href="https://opensource.org/licenses/MIT">MIT</a> licensed.
+
+
+
