@@ -7,7 +7,7 @@ First, set up the ENV vars
   - the `SALT` can be any string
   - the `NASA` is the api key for the NASA API
 
-First, run the development server:
+Then, run the development server:
 
 ```bash
 npm run dev
