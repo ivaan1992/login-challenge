@@ -5,6 +5,7 @@ import { cookies } from "next/headers";
 
 import '@/styles/clock.scss';
 import dynamic from "next/dynamic";
+import { NasaImages } from "@/components/NasaImages";
 
 export default async function Home() {
     const cookieStore = cookies();
@@ -19,6 +20,7 @@ export default async function Home() {
             <h1>Bienvenido {user?.name}</h1>
             <Logout />
             <DynamicClock />
+            <NasaImages />
         </div>
     )
 }
