@@ -24,14 +24,14 @@ export function RegisterForm() {
 
                 return response.json();
             })
-
-            .catch(error => {
-                console.error(error);
-                toastr.error(error.message);
-            });
-            // .catch(({message}) => {
-            //     toastr.error(message);
-            // })
+            .then(({message, token}) => {
+                toastr.success(message);
+                setCookie('auth-x', token);
+                router.push('/user');
+            })
+            .catch(({message}) => {
+                toastr.error(message);
+            })
     }
 
     return (
