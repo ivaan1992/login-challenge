@@ -32,3 +32,7 @@ body {
   background: rgba(0, 0, 0, 0.01);
   backdrop-filter: blur(33.5px);
 }
+
+.main-content {
+  height: 70vh;
+}
