@@ -25,6 +25,8 @@ export function RegisterForm() {
                 return response.json();
             })
             .then(({message, token}) => {
+                console.log(message, token);
+                
                 toastr.success(message);
                 setCookie('auth-x', token);
                 router.push('/user');
