@@ -11,7 +11,7 @@ export async function NasaImages() {
 
     return(
         <div className="nasa-images-container">
-            <Image src={selectedPhoto.img_src} alt={selectedPhoto.sol} width={200} height={200}/>
+            <Image src={selectedPhoto.img_src} alt={selectedPhoto.sol} className="nasa-image" />
         </div>
     )
 }
