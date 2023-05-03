@@ -4,7 +4,7 @@
     right: 1rem;
     padding: 0.5rem 1rem;
 
-    animation: rainbow 50s ease-in-out infinite;
+    animation: rainbow 30s ease-in-out infinite;
     border: 2px solid;
     border-radius: .2rem;
     font-size: 3rem;
@@ -21,7 +21,7 @@
     z-index: -1;
     border-radius: inherit;
     filter: blur(2px);
-    animation: shadow-rainbow 50s ease-in-out infinite;
+    animation: shadow-rainbow 30s ease-in-out infinite;
 }
 
 @keyframes rainbow {
