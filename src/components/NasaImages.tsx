@@ -29,12 +29,12 @@ export function NasaImages({images}: Props) {
 
     return(
         <div className="nasa-images-container flex flex-col justify-stretch items-center my-auto">
-            <div className="carousel flex rounded overflow-hidden justify-stretch items-center gap-5">
+            <div className="carousel flex rounded overflow-hidden justify-center md:justify-stretch items-center gap-5">
                 <button 
                     className="bg-blue-950 text-white cursor-pointer w-10 h-10 flex justify-center items-center rounded-full"
                     onClick={() => handleAdvance(-1)}
                 >{"<"}</button>
-                <img className="w-full md:w-96 object-contain" src={selectedImage.img_src} alt={selectedImage.sol} />
+                <img className="w-5/6 md:w-96 object-contain" src={selectedImage.img_src} alt={selectedImage.sol} />
                 <button
                     className="bg-blue-950 text-white cursor-pointer w-10 h-10 flex justify-center items-center rounded-full"
                     onClick={() => handleAdvance(+1)}
